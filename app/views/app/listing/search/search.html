@@ -1,6 +1,8 @@
 <div class="row search-bar-container">
-  <div class="col-md-10 col-md-offset-1">
-    <search-bar></search-bar>
+  <div class="container-fluid">
+    <div class="col-md-10 col-md-offset-1 col-sm-12">
+      <search-bar></search-bar>
+    </div>
   </div>
 </div>
 <!-- <div class="row">
@@ -9,24 +11,27 @@
 </div> -->
 
 <div class="row filter-bar-container">
-  <div class="col-md-10 col-md-offset-1">
+  <div class="col-md-10 col-md-offset-1 col-sm-12">
   <div class="row">
 
-    <div class="col-md-8">
-      <div class="text-left search-title-container">
-        <h3>
-          <b>
-            <span ng-repeat="key in vm.query_keys">
-              <span class="badge badge-primary"><h4><a href class="del-badge" ng-click="vm.removeQuery($index)">x</a> {{key}}</h4></span>
-            </span>
-          </b>
-        </h3>
+    <div class="container-fluid">
+      <div class="col-md-8 col-sm-8 col-xs-12">
+        <div class="text-left search-title-container">
+          <h3>
+            <b>
+              <span ng-repeat="key in vm.query_keys">
+                <span class="badge badge-primary"><h4><a href class="del-badge" ng-click="vm.removeQuery($index)">x</a> {{key}}</h4></span>
+              </span>
+            </b>
+          </h3>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-4 col-xs-12 filter-inputbox">
+        <input type="text" class="query-inputbox form-control" placeholder="search query" ng-model="newKey" ng-keyup="vm.addQuery(newKey, $event)"/>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <input type="text" class="query-inputbox form-control" placeholder="search query" ng-model="newKey" ng-keyup="vm.addQuery(newKey, $event)"/>
-    </div>
   </div>
   </div>
 

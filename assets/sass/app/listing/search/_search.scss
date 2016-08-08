@@ -8,6 +8,16 @@
 
 .filter-bar-container {
   margin-bottom: 32px;
+
+  .filter-inputbox {
+    @include for-screen('mobile') {
+      margin-top: 32px;
+    }
+
+    @include for-screen('tab') {
+      margin-top: 24px;
+    }
+  }
 }
 
 .query-inputbox {
@@ -16,7 +26,7 @@
   border: 1px solid #eee;
   box-shadow: 1.638px 1.147px 8px 0 rgba(235, 101, 108, 0.2);
   left: 0;
-  margin-bottom: -12px;
+  margin-bottom: -18px;
   position: relative;
   top: 0;
   width: 100%;

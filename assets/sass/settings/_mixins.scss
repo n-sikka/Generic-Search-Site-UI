@@ -88,7 +88,7 @@
   }
 
   @if $breakpoint == 'tab' {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       @content;
     }
   } @else if $breakpoint == 'tab-up' {

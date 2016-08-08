@@ -41,6 +41,14 @@
     .meta-title {
       color: $primary-color;
     }
+
+    @include for-screen('tab') {
+      margin-top: 3rem;
+    }
+
+    @include for-screen('mobile') {
+      margin-top: 3rem;
+    }
   }
   .data-set-img{
     margin-top: 1rem;
@@ -55,9 +63,17 @@
 
       .badge {
         @include padding(5px, 5px, 10px, 10px)
+        margin-top: 10px;
       }
     }
 
+  }
+
+  .tags {
+    @include for-screen('mobile') {
+      margin-top: 50px;
+      text-align: center
+    }
   }
 
   .meta-list-group {

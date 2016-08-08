@@ -18,6 +18,10 @@
 			color: $theme-grey;
 			font-size: 19px;
 			width: 81%;
+
+			@include for-screen('mobile') {
+				width: 75%;
+			}
 		}
 
 		.search-icon {

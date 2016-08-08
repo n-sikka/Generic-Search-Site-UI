@@ -52,3 +52,7 @@
     transition: 0.2s ease;
   }
 }
+
+.btn-accent {
+  @include btn-styles($accent-primary)
+}

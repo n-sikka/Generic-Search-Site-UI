@@ -12,8 +12,7 @@
 				controller: 'SearchBarController',
 				controllerAs: 'vm',
 				scope: {
-					groupBy: '@group',
-					limitBy: '=limit'
+					key: '='
 				},
 				link: linkFunction
 

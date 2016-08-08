@@ -4,12 +4,12 @@
 
       <div class="col-md-8">
         <h3>
-          <img src="http://loremflickr.com/50/50?random=1" alt="dataset-img" class="img-circle"/>
-          <span class="item-card-title"><a href>Title of this Search item Card</a></span>
+          <img ng-src="{{data.dataset.image}}" alt="dataset-img" class="img-circle"/>
+          <span class="item-card-title"><a href>{{data.title}}</a></span>
         </h3>
       </div>
       <div class="col-md-4 text-right">
-        <span class="search-tags">Healthcare</span> <span class="search-tags">Agriculture</span>
+        <span class="search-tags" ng-repeat="tag in data.tags">{{tag}}</span>
       </div>
 
     </div>
@@ -19,48 +19,47 @@
         <div class="meta-container">
           <div class="row">
             <div class="col-md-4">
-              <b>Granuality</b>: State
+              <b class="meta-title">Granuality</b>: {{data.granuality}}
             </div>
             <div class="col-md-4">
-              <b>Sector</b>: Urban
+              <b class="meta-title">Sector</b>: {{data.sector}}
             </div>
           </div>
           <div class="row">
             <div class="col-md-4">
-              <b>Frequency of Data</b>: High
+              <b class="meta-title">Frequency of Data</b>: {{data.frequency}}
             </div>
             <div class="col-md-4">
-              <b>Time Period</b>: 1998-2015
+              <b class="meta-title">Time Period</b>: {{data.time_period}}
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 search-item-desc">
-              <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</small>
+              <small>{{data.description}}</small>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <!-- <img class="img-responsive data-set-img" src="http://loremflickr.com/280/245?random=1" alt="dataImg" /> -->
         <ul class="list-group meta-list-group">
-          <li class="list-group-item"><b><a href>Data Source </b><i class="fa fa-external-link"></i> </a></li>
-          <li class="list-group-item"><b>Released: </b> 5<sup>th</sup>, March 2014</li>
-          <li class="list-group-item">  <b>Records upto: </b> 9<sup>th</sup>, January 2012</li>
-          <li class="list-group-item"><b>Total Records: </b> 25,946</li>
+          <li class="list-group-item"><b><a href >{{data.dataset.source}} </b><i class="fa fa-external-link"></i> </a></li>
+          <li class="list-group-item"><b>Released: </b> {{data.dataset.released | date: 'dd/mm/yyy'}}</li>
+          <li class="list-group-item">  <b>Records upto: </b>{{data.dataset.records_upperbound | date: 'dd/mm/yyy'}}</li>
+          <li class="list-group-item"><b>Total Records: </b> {{data.dataset.total_records}}</li>
         </ul>
 
       </div>
     </div>
 
-    <div class="row detail-list-container text-left">
-      <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-8 detail-list-container text-left">
         <div class="col-md-1 service-item" ng-repeat="item in data.services">
             <span class="badge" ng-class="{'color-badge' : item.available , 'grey-badge' : !item.available}">{{item.service}}</span>
         </div>
       </div>
       <div class="col-md-4 text-right">
-        <a href>See Details</a>
+        <button class="btn btn-accent">See Details</button>
       </div>
     </div>
 

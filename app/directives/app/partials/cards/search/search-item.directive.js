@@ -16,7 +16,6 @@
 			};
 
       function linkFunction(scope) {
-        console.log(scope.data);
       }
 
       return directive;

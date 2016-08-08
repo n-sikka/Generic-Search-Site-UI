@@ -1,30 +1,42 @@
-<div class="row">
+<div class="row search-bar-container">
+  <div class="col-md-10 col-md-offset-1">
+    <search-bar></search-bar>
+  </div>
+</div>
+<!-- <div class="row">
   <div class="container jumbotron ">
-    <div class="col-md-12">
-      <div class="text-center search-title-container">
-        <h3>Showing Results for
+  </div>
+</div> -->
+
+<div class="row filter-bar-container">
+  <div class="col-md-10 col-md-offset-1">
+  <div class="row">
+
+    <div class="col-md-8">
+      <div class="text-left search-title-container">
+        <h3>
           <b>
-            <span class="badge badge-primary"><h4>{{vm.query.city}}</h4></span>
-            <span class="badge badge-primary"><h4>{{vm.query.entity}}</h4></span>
-            <span class="badge badge-primary"><h4>{{vm.query.q}}</h4></span>
+            <span ng-repeat="key in vm.query_keys">
+              <span class="badge badge-primary"><h4><a href class="del-badge" ng-click="vm.removeQuery($index)">x</a> {{key}}</h4></span>
+            </span>
           </b>
         </h3>
       </div>
     </div>
-    <div class="container">
-      <div class="col-md-12">
-        <search-bar  group="_type" limit="0"></search-bar>
-      </div>
+
+    <div class="col-md-4">
+      <input type="text" class="query-inputbox form-control" placeholder="search query" ng-model="newKey" ng-keyup="vm.addQuery(newKey, $event)"/>
     </div>
   </div>
+  </div>
+
 </div>
 
-
-<div class="row">
+<div class="row" ng-init="vm.search()">
   <div class="container">
     <div class="search-item-container">
-      <div ng-repeat="item in [1,2,3,4,5,6,7,8]">
-        <search-item data="vm.dataSet"></search-item>
+      <div ng-repeat="data in vm.dataSet">
+        <search-item data="data"></search-item>
       </div>
     </div>
   </div>

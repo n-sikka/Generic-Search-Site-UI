@@ -1,0 +1,197 @@
+[
+  {
+    "id" : 0,
+    "title" : "Lorem Ipsum Title for Search Item 1",
+    "tags" : ["Healthcare", "Agriculture", "Demographics"],
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "granuality": "State",
+    "frequency": "High",
+    "time_period": "1998-2012",
+    "sector": "urban",
+    "services" : [
+      {
+        "service" : "pdf",
+        "available": true
+      },
+      {
+        "service" : "csv",
+        "available": true
+      },
+      {
+        "service" : "json",
+        "available": false
+      },
+      {
+        "service" : "maps",
+        "available": false
+      },
+      {
+        "service" : "charts",
+        "available": true
+      }
+    ],
+    "dataset" : {
+      "image" : "http://loremflickr.com/35/35?random=1",
+      "source": "SocialCops",
+      "released": "2015-10-19T07:22Z",
+      "records_upperbound": "2012-03-19T07:22Z",
+      "total_records": "25k"
+    }
+  },
+  {
+    "id" : 1,
+    "title" : "Lorem Ipsum Title for Search Item 2",
+    "tags" : ["Healthcare", "Sports"],
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "granuality": "City",
+    "frequency": "Low",
+    "time_period": "2012",
+    "sector": "Rural",
+    "services" : [
+      {
+        "service" : "pdf",
+        "available": false
+      },
+      {
+        "service" : "csv",
+        "available": true
+      },
+      {
+        "service" : "json",
+        "available": true
+      },
+      {
+        "service" : "maps",
+        "available": true
+      },
+      {
+        "service" : "charts",
+        "available": false
+      }
+    ],
+    "dataset" : {
+      "image" : "http://loremflickr.com/35/35?random=2",
+      "source": "Google",
+      "released": "2016-10-19T07:22Z",
+      "records_upperbound": "2016-03-19T07:22Z",
+      "total_records": "15.75k"
+    }
+  },
+  {
+    "id" : 2,
+    "title" : "Lorem Ipsum Title for Search Item 3",
+    "tags" : ["Education", "Sports"],
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "granuality": "Nation",
+    "frequency": "High",
+    "time_period": "2000-2014",
+    "sector": "Urban",
+    "services" : [
+      {
+        "service" : "pdf",
+        "available": true
+      },
+      {
+        "service" : "csv",
+        "available": true
+      },
+      {
+        "service" : "json",
+        "available": true
+      },
+      {
+        "service" : "maps",
+        "available": false
+      },
+      {
+        "service" : "charts",
+        "available": false
+      }
+    ],
+    "dataset" : {
+      "image" : "http://loremflickr.com/35/35?random=1",
+      "source": "SocialCops",
+      "released": "2014-10-19T07:22Z",
+      "records_upperbound": "2014-03-19T07:22Z",
+      "total_records": "105.5k"
+    }
+  },
+  {
+    "id" : 3,
+    "title" : "Lorem Ipsum Title for Search Item 4",
+    "tags" : ["Education", "Media", "Agriculture"],
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "granuality": "District",
+    "frequency": "High",
+    "time_period": "1989-2011",
+    "sector": "Rural",
+    "services" : [
+      {
+        "service" : "pdf",
+        "available": false
+      },
+      {
+        "service" : "csv",
+        "available": true
+      },
+      {
+        "service" : "json",
+        "available": true
+      },
+      {
+        "service" : "maps",
+        "available": false
+      },
+      {
+        "service" : "charts",
+        "available": true
+      }
+    ],
+    "dataset" : {
+      "image" : "http://loremflickr.com/35/35?random=2",
+      "source": "Facebook",
+      "released": "2012-10-19T07:22Z",
+      "records_upperbound": "2011-03-19T07:22Z",
+      "total_records": "105.5k"
+    }
+  },
+  {
+    "id" : 4,
+    "title" : "Lorem Ipsum Title for Search Item 5",
+    "tags" : ["Education", "Healthcare", "Agriculture", "Sports"],
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "granuality": "State",
+    "frequency": "High",
+    "time_period": "2001-2016",
+    "sector": "All",
+    "services" : [
+      {
+        "service" : "pdf",
+        "available": true
+      },
+      {
+        "service" : "csv",
+        "available": true
+      },
+      {
+        "service" : "json",
+        "available": true
+      },
+      {
+        "service" : "maps",
+        "available": false
+      },
+      {
+        "service" : "charts",
+        "available": true
+      }
+    ],
+    "dataset" : {
+      "image" : "http://loremflickr.com/35/35?random=2",
+      "source": "Facebook",
+      "released": "2016-10-19T07:22Z",
+      "records_upperbound": "20161-03-19T07:22Z",
+      "total_records": "55.5k"
+    }
+  }
+]

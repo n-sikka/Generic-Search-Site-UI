@@ -1,13 +1,55 @@
+.search-bar-container {
+  margin-bottom: 32px;
+
+  .search-bar-input {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  }
+}
+
+.filter-bar-container {
+  margin-bottom: 32px;
+}
+
+.query-inputbox {
+  @include padding(24px, 24px, 32px, 32px);
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 1.638px 1.147px 8px 0 rgba(235, 101, 108, 0.2);
+  left: 0;
+  margin-bottom: -12px;
+  position: relative;
+  top: 0;
+  width: 100%;
+
+  input {
+    border: 0;
+    color: $theme-grey;
+    font-size: 19px;
+    width: 81%;
+  }
+}
+
 .search-title-container {
   color: #fff;
-  
+
   .badge-primary {
     padding: 5px;
+    margin-top: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    background: #fff;
+    background: $primary-color-dark;
     cursor: pointer;
-    color: $theme-black;
+    color: $primary-color-text;
+
+    .del-badge {
+      color:  $primary-color-text;
+
+      &:hover,
+      &:focus {
+        color :  darken($primary-color-text, 20%);
+        text-decoration: none;
+      }
+    }
   }
 
 }

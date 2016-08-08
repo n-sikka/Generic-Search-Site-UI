@@ -3,7 +3,11 @@ $primary-font: sans-serif;
 $title-font: sans-serif;
 
 // Colors
-$theme-black: #282828;
-$theme-grey: #a8a8a8;
-$primary-color: #48b39b;
-$secondary-color: #00C36F;
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$secondary-color:      #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-primary:       #00BCD4;
+$theme-black:          #212121;
+$theme-grey:           #757575;
+$divider-color:        $primary-color-dark;

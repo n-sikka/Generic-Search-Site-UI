@@ -1,11 +1,11 @@
 <div class="search-bar">
 	<div class="search-bar-input">
 		<i class="fa fa-search  search-icon"></i>
-		<i class="fa fa-circle-o-notch search-loader-icon" ng-class="{'fa-spin': vm.searching==true}"></i>
+		<a href><i class="fa fa-map-marker search-loader-icon" ng-class="{'fa-spin': vm.searching==true}"></i></a>
 		<input type="text" ng-keyup="vm.set(query)" ng-model="query" placeholder="eg: population of saket in 2011" />
 	</div>
 
-	<div class="search-typeahead-container" ng-if="query " >
+	<div class="search-typeahead-container" ng-if="query" >
 		<!-- <search-typeahead query="query" results="results" groups="types" limit="limitBy"></search-typeahead> -->
 		<div>
 

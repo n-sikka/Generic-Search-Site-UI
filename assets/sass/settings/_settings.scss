@@ -53,3 +53,9 @@ h1, h2, h3 {
 .jumbotron {
   background-color: $primary-color;
 }
+
+.form-control:active,
+.form-control:focus {
+    box-shadow: none;
+    border-color: $primary-color;
+}

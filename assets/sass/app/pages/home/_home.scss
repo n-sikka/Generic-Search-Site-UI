@@ -1,0 +1,23 @@
+.identifiers {
+  @include padding(24px, 24px, inherit, inherit);
+
+  .label-success {
+    padding: 1.5rem;
+    background-color: $primary-color;
+    color: #fff;
+    cursor: pointer;
+    // transition: 0.2s ease all;
+
+    &:hover {
+      & .fa {
+        color: darken($primary-color, 25%);
+      }
+
+      color: darken($primary-color, 25%);
+    }
+
+    .fa {
+      color: #fff;
+    }
+  }
+}

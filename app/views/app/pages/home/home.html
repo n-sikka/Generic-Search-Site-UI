@@ -1,1 +1,23 @@
-<h1>Welcome!</h1>
+<h1 class="title text-center primary-title">Welcome to Social Cops : Access</h1>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 column-center">
+			<search-bar  group="_type" limit="2"></search-bar>
+		</div>
+	</div>
+
+	<div class="row slide-container home-identifiers text-center" ng-init="vm.getSpec()">
+		<div class="row">
+			<div class="container">
+				<h3 class="slide-title"> Quick Search </h3>
+				<div class="col-md-3 identifiers" ng-repeat="item in vm.identifiers">
+
+					<h1><span class="label label-success"><i class="fa ng-class:item.icon"></i> {{item.title}}</span></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

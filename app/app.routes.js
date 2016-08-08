@@ -27,6 +27,17 @@
             controllerAs:'vm'
           }
         }
+      })
+      .state('search', {
+        url: '/search/city=:city&entity=:entity&q=:q',
+        parent: 'base',
+        views: {
+          "content": {
+            templateUrl: _dirPath + 'listing/search/search.html',
+            controller: 'SearchController',
+            controllerAs: 'vm'
+          }
+        }
       });
 
   }

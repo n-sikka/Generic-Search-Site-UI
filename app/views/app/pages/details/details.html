@@ -1,3 +1,33 @@
+<div class="row-fluid">
+  <div class="container-fluid">
+    <div class="card">
+      <ol class="breadcrumb details-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="search({city: vm.params.city, entity: vm.params.entity, q: vm.params.q})">Search</a></li>
+        <li class="active">Details</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid filter-bar-container">
+
+  <div class="container-fluid">
+    <div class="col-md-12 col-sm-12">
+      <div class="text-left search-title-container">
+        <h3>
+          <b>
+            <span ng-repeat="key in vm.details.topics">
+              <span class="badge "><h4>{{key}}</h4></span>
+            </span>
+          </b>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <div class="row-fluid" ng-init="vm.getData()">
   <div class="container-fluid">
     <div class="col-sm-12">

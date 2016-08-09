@@ -1,17 +1,20 @@
-<div class="search-bar">
+<div class="search-bar" ng-init="vm.getCities()">
 	<div class="search-bar-input">
-		<i class="fa fa-search  search-icon"></i>
-		<a href><i class="fa fa-map-marker search-loader-icon" ng-class="{'fa-spin': vm.searching==true}"></i></a>
-		<input type="text" ng-keyup="vm.set(query)" ng-model="query" placeholder="eg: population of saket in 2011" />
+		<i class="fa fa-search search-icon"></i>
+		<select class="city-select search-loader-icon" name="repeatSelect" ng-model="location">
+			<option value="" class="option-label">City</option>
+			<option ng-repeat="(key, value) in vm.cities" value="{{key}}">{{value}}</option>
+		</select>
+		<input type="text" ng-model="query" placeholder="Search.." />
 	</div>
 
-	<div class="search-typeahead-container" ng-if="query" >
+	<div class="search-typeahead-container" ng-if="query" ng-init="area = location ? location : 'india'">
 		<!-- <search-typeahead query="query" results="results" groups="types" limit="limitBy"></search-typeahead> -->
 		<div>
 
 			<ul class="typeahead-list">
 
-				<li class="list-header" ui-sref="search({city: 'delhi', entity: 'healthcare', q: query})">
+				<li class="list-header" ui-sref="search({city: area, entity: 'healthcare', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Healthcare</b></span>
 
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
@@ -19,7 +22,7 @@
 					<span class="list-count pull-right primary-tag" >View All <b>10</b></span>
 				</li>
 
-				<li class="list-header" ui-sref="search({city: 'delhi', entity: 'education', q: query})">
+				<li class="list-header" ui-sref="search({city: area, entity: 'education', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Education</b></span>
 
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
@@ -27,7 +30,7 @@
 					<span class="list-count pull-right primary-tag">View All <b>25</b></span>
 				</li>
 
-				<li class="list-header" ui-sref="search({city: 'delhi', entity: 'demographics', q: query})">
+				<li class="list-header" ui-sref="search({city: area, entity: 'demographics', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Demographics</b></span>
 
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
@@ -35,7 +38,7 @@
 					<span class="list-count pull-right primary-tag">View All <b>68</b></span>
 				</li>
 
-				<li class="list-header" ui-sref="search({city: 'delhi', entity: 'media', q: query})">
+				<li class="list-header" ui-sref="search({city: area, entity: 'media', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Media</b></span>
 
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>

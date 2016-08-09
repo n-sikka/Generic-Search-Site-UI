@@ -41,25 +41,5 @@
 
 .search-title-container {
   color: #fff;
-
-  .badge-primary {
-    padding: 5px;
-    margin-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background: $primary-color-dark;
-    cursor: pointer;
-    color: $primary-color-text;
-
-    .del-badge {
-      color:  $primary-color-text;
-
-      &:hover,
-      &:focus {
-        color :  darken($primary-color-text, 20%);
-        text-decoration: none;
-      }
-    }
-  }
-
+  padding-top: 8px;
 }

@@ -16,7 +16,18 @@ gulp.task('check:sass', function(){
   return gulp.src(['assets/sass/**/*.scss'])
   .pipe(sassLint(
     {
-      'endless' : true
+      'endless' : true,
+      rules: {
+        "single-line-per-selector" : 0,
+        "indentation": 0,
+        "clean-import-paths" : 0,
+        "leading-zero": 0,
+        "no-trailing-zero": 0,
+        "no-color-literals": 0,
+        "nesting-depth": 3,
+        'property-sort-order' : 0,
+        "space-after-comma": 0
+      }
     }
   ))
   .pipe(sassLint.format())

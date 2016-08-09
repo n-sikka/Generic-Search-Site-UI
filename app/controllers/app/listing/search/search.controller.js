@@ -5,7 +5,7 @@
   .module('ng-app')
   .controller('SearchController' , controller);
 
-  function controller($stateParams, SearchService, $state){
+  function controller($stateParams, SearchService, $state, $rootScope){
     var vm = this;
 
     vm.query = $stateParams;
@@ -56,6 +56,11 @@
 
     }
 
+
+    $rootScope.$on('$stateChangeStart',
+    function(event, toState, toParams, fromState, fromParams){
+        $rootScope.prevState = fromParams;
+    })
 
   }
 

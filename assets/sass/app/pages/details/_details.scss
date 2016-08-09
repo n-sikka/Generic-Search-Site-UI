@@ -5,6 +5,12 @@
 
 .item-summary {
   margin-top: 3rem;
+  background: #D6EEEC;
+  border: 2px solid #D6EEEC;
+}
+
+.item-summary-blockquote {
+  border-color: #efefef;
 }
 
 .details-nav{
@@ -49,10 +55,6 @@
     padding-top: 1.25rem;
   }
 
-  .item-summary-blockquote {
-    border-color: #efefef;
-  }
-
   .item-lead {
     mark {
       padding: 1rem;
@@ -95,7 +97,9 @@
 
     .topic-list-item {
       margin-bottom: 15px;
-
+      a{
+        color: $theme-black;
+      }
       mark {
         border-radius: 2px;
         padding: 5px;

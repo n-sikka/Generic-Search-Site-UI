@@ -5,8 +5,6 @@
 
 .item-summary {
   margin-top: 3rem;
-  background: #D6EEEC;
-  border: 2px solid #D6EEEC;
 }
 
 .item-summary-blockquote {
@@ -31,7 +29,6 @@
     }
   }
 }
-
 
 .item-details {
   padding-top: 2rem;
@@ -103,6 +100,7 @@
       mark {
         border-radius: 2px;
         padding: 5px;
+        background: #D6EEEC;
       }
     }
   }

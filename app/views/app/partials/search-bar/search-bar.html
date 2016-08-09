@@ -2,7 +2,7 @@
 	<div class="search-bar-input">
 		<i class="fa fa-search search-icon"></i>
 		<select class="city-select search-loader-icon" name="repeatSelect" ng-model="location">
-			<option value="" class="option-label">City</option>
+			<option value="" class="option-label">Select City</option>
 			<option ng-repeat="(key, value) in vm.cities" value="{{key}}">{{value}}</option>
 		</select>
 		<input type="text" ng-model="query" placeholder="Search.." />

@@ -25,6 +25,14 @@
     }
   }
 
+  .meta-summary {
+    padding-top: 1.25rem;
+  }
+
+  .item-summary-blockquote {
+    border-color: #efefef;
+  }
+
   .item-lead {
     mark {
       padding: 1rem;
@@ -52,4 +60,42 @@
   .chart-list {
     margin-left: 0.25rem;
   }
+
+  .topic-list-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+  }
+  .topic-list {
+
+    .topic-list-item {
+      margin-bottom: 10px;
+
+      mark {
+        border-radius: 2px;
+        padding: 3px;
+      }
+    }
+  }
+
+  .tag-list {
+
+    .tag-list-item {
+      color: $accent-primary;
+      border: 1px solid $accent-primary;
+      border-radius: 2rem;
+      @include padding(5px, 5px, 10px, 10px);
+      cursor: pointer;
+      margin-bottom: 1rem;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($accent-primary, 15%);
+        border-color: darken($accent-primary, 15%);
+      }
+    }
+
+  }
+
 }

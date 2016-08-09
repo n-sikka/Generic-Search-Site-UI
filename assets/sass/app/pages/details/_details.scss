@@ -7,6 +7,16 @@
   padding-top: 0;
 }
 
+.service-list {
+  .service-list-item {
+    margin-left: 1rem;
+
+    a {
+      color: $primary-color-text;
+    }
+  }
+}
+
 .item-details {
   padding-top: 2rem;
   padding-left: 1rem;
@@ -87,6 +97,7 @@
       @include padding(5px, 5px, 10px, 10px);
       cursor: pointer;
       margin-bottom: 1rem;
+      margin-right: 1rem;
 
       &:hover,
       &:focus,

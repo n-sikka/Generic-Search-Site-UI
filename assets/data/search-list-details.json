@@ -1,0 +1,116 @@
+{
+  "title" : "Dataset Item Title",
+  "data_source" : {
+    "author": "SocialCops",
+    "slug" : "https://socialcops.com/",
+    "image" : "http://loremflickr.com/200/200"
+  },
+  "main_tags" : ["Healthcare", "Agriculture", "Climate"],
+  "topics": ["Consumer", "Housing and Community", "Climate", "Economy", "Science", "Universe", "Something Else", "This Too"],
+  "services" : [
+    {
+      "service" : "pdf",
+      "available": true,
+      "slug" : ""
+    },
+    {
+      "service" : "csv",
+      "available": true,
+      "slug" : ""
+    },
+    {
+      "service" : "json",
+      "available": false
+    },
+    {
+      "service" : "maps",
+      "available": false
+    },
+    {
+      "service" : "charts",
+      "available": true,
+      "slug" : ""
+    }
+  ],
+  "about" : {
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "meta" : {
+      "released" : "2015-10-19T07:22Z",
+      "records_upto" : "2012-03-19T07:22Z",
+      "time_period" : "1999-2014"
+    }
+  },
+  "legal" : {
+    "type" : "Public",
+    "licence" : "Indian Government Work"
+  },
+  "search_tags" : ["Consumer", "Housing and Community", "Climate", "Population", "Healthcare", "Agriculture", "Dataset", "Socialcops", "Charts", "Delhi", "India", "Data"],
+  "charts" : [
+    {
+      "topics" : ["topic 1", "topic 2", "topic 3"],
+      "coordinates" : [
+        {
+          "label" : "1999",
+          "value" : "522"
+        },
+        {
+          "label" : "2000",
+          "value" : "128"
+        },
+        {
+          "label" : "2001",
+          "value" : "648"
+        },
+        {
+          "label" : "2002",
+          "value" : "822"
+        },
+        {
+          "label" : "2003",
+          "value" : "644"
+        },
+        {
+          "label" : "2004",
+          "value" : "844"
+        },
+        {
+          "label" : "2005",
+          "value" : "1001"
+        }
+      ],
+      "title": "Table in this Dataset converted to chart Title 1",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "data" : "Yearly Data",
+      "time_period" : "1999-2005"
+    },
+    {
+      "topics" : ["topic A", "topic B", "topic C"],
+      "coordinates" : [
+        {
+          "label" : "2005",
+          "value" : "648"
+        },
+        {
+          "label" : "2006",
+          "value" : "822"
+        },
+        {
+          "label" : "2007",
+          "value" : "644"
+        },
+        {
+          "label" : "2008",
+          "value" : "844"
+        },
+        {
+          "label" : "2009",
+          "value" : "366"
+        }
+      ],
+      "title": "Table in this Dataset converted to chart Title 2",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "data" : "Yearly Data",
+      "time_period" : "2005-2009"
+    }
+  ]
+}

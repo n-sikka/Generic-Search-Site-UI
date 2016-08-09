@@ -1,4 +1,4 @@
-<div class="row-fluid">
+<div class="row-fluid" ng-init="vm.getData()">
   <div class="container-fluid">
     <div class="col-sm-12">
       <div class="jumbotron card item-details">
@@ -7,14 +7,14 @@
           <div class="media">
             <div class="media-left hidden-xs">
               <a href>
-                <img src="http://loremflickr.com/200/200" alt="img" class="media-object"/>
+                <img ng-src="{{vm.details.data_source.image}}" alt="img" class="media-object"/>
               </a>
             </div>
             <div class="media-body horizontal-padding">
               <h2 class="media-heading">
-                Dataset Item Title
-                <small>( <a href>SocialCops <small><i class="fa fa-external-link"></i></small></a> )</small>
-                <small class="pull-right item-details-date vertical-padding"><b>Released:</b> 19/52/2015</small>
+                {{vm.details.title}}
+                <small>( <a ng-href="{{vm.details.data_source.slug}}">{{vm.details.data_source.author}} <small><i class="fa fa-external-link"></i></small></a> )</small>
+                <small class="pull-right item-details-date vertical-padding"><b>Released:</b> {{vm.details.about.meta.released | date : 'dd/MM/yyyy'}}</small>
               </h2>
 
               <ul class="list-inline item-details-tags">
@@ -28,39 +28,21 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <h2 class="lead topic-list-title"> Topics </h2>
                   <ul class="list-inline topic-list">
-                    <li class="topic-list-item"><mark><a href>Consumer</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Housing and Community</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Climate</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Economy</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Science</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Universe</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>Something Else</a></mark></li>
-                    <li class="topic-list-item"><mark><a href>This Too</a></mark></li>
+                    <li class="topic-list-item" ng-repeat="item in vm.details.topics">
+                      <mark> <a href>{{item}}</a> </mark>
+                    </li>
                   </ul>
                 </div>
+
                 <div class="col-md-6 col-sm-6 col-xs-12">
                   <h2 class="lead topic-list-title"> Resources </h2>
-                  <!-- <blockquote class="item-summary-blockquote"> -->
                     <div class="details-meta-summary">
                       <div class="detail-list-container detail-page-services text-left row">
-                        <div class="col-md-1 col-xs-1 col-sm-1 service-item">
-                          <span class="badge color-badge badge-accent">pdf</span>
-                        </div>
-                        <div class="col-md-1 col-xs-1 col-sm-1 service-item">
-                          <span class="badge color-badge badge-accent">csv</span>
-                        </div>
-                        <div class="col-md-1 col-xs-1 col-sm-1 service-item">
-                          <span class="badge grey-badge">json</span>
-                        </div>
-                        <div class="col-md-1 col-xs-1 col-sm-1 service-item">
-                          <span class="badge grey-badge">maps</span>
-                        </div>
-                        <div class="col-md-1 col-xs-1 col-sm-1 service-item">
-                          <span class="badge color-badge badge-accent">charts</span>
+                        <div class="col-md-1 col-xs-1 col-sm-1 service-item" ng-repeat="item in vm.details.services">
+                          <span class="badge" ng-class="{'badge-accent' : item.available , 'grey-badge' : !item.available}">{{item.service}}</span>
                         </div>
                       </div>
                     </div>
-                  <!-- </blockquote> -->
                 </div>
               </div>
 
@@ -75,15 +57,15 @@
           </div>
           <div class="col-md-7">
             <blockquote>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              {{vm.about.description}}
             </blockquote>
           </div>
           <div class="col-md-5">
             <blockquote>
               <ul class="list-group meta-list-group">
-                <li class="list-group-item"><b>Released: </b> 12/1/2014</li>
-                <li class="list-group-item">  <b>Records upto: </b>12/12/2013</li>
-                <li class="list-group-item"><b>Time Period </b> 1999-2014 </li>
+                <li class="list-group-item"><b>Released: </b> {{vm.details.about.meta.released | date : 'dd/MM/yyyy'}}</li>
+                <li class="list-group-item">  <b>Records upto: </b>{{vm.details.about.meta.records_upto | date : 'dd/MM/yyyy'}}</li>
+                <li class="list-group-item"><b>Time Period </b> {{vm.details.about.meta.time_period}} </li>
               </ul>
             </blockquote>
           </div>
@@ -95,8 +77,15 @@
           </div>
           <div class="col-md-12">
             <blockquote>
-              <div><i class="fa fa-globe"></i> <b>Public:</b> This dataset is intended for public access and use.</div>
-              <div><i class="fa fa-file-text-o"></i> <b>License:</b> Indian Government Work</div>
+              <span ng-if="vm.details.legal.type === 'Public'">
+                <div><i class="fa fa-globe"></i> <b>Public:</b> This dataset is intended for public access and use.</div>
+              </span>
+              <span ng-if="vm.details.legal.type === 'Private'">
+                <div><i class="fa fa-globe"></i> <b>Private:</b> This dataset is intended for Private access and use only.</div>
+              </span>
+
+
+              <div><i class="fa fa-file-text-o"></i> <b>License:</b> {{vm.details.legal.licence}}</div>
             </blockquote>
           </div>
         </div>
@@ -108,8 +97,9 @@
           <div class="col-md-12">
             <blockquote>
               <ul class="list-inline service-list">
-                <li class="service-list-item">PDF</li>
-                <li class="service-list-item">CSV</li>
+                <li class="service-list-item" ng-repeat="item in vm.details.services" ng-if="item.available">
+                  <a ng-href="{{item.slug}}">{{item.service}}</a>
+                </li>
               </ul>
             </blockquote>
           </div>
@@ -121,7 +111,7 @@
           </div>
           <div class="col-md-12">
               <ul class="list-inline chart-list">
-              <blockquote ng-repeat="item in [1,2,3]" >
+              <blockquote ng-repeat="item in vm.details.charts" >
                 <chart-list-item data="item"></chart-list-item>
               </blockquote>
               </ul>
@@ -135,17 +125,7 @@
           <div class="col-md-12">
             <blockquote>
               <ul class="list-inline tag-list">
-                <li class="tag-list-item">Consumer</li>
-                <li class="tag-list-item">Housing and Community</li>
-                <li class="tag-list-item">Climate</li>
-                <li class="tag-list-item">Population</li>
-                <li class="tag-list-item">Healthcare</li>
-                <li class="tag-list-item">Agriculture</li>
-                <li class="tag-list-item">Dataset</li>
-                <li class="tag-list-item">Socialcops</li>
-                <li class="tag-list-item">Charts</li>
-                <li class="tag-list-item">Delhi</li>
-              </ul>
+                <li class="tag-list-item" ng-repeat="item in vm.details.search_tags">{{item}}</li>
             </blockquote>
           </div>
         </div>

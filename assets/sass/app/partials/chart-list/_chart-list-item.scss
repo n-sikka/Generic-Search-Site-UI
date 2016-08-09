@@ -9,7 +9,10 @@
   .media-heading {
     font-size: 21px;
     font-weight: 600;
+  }
 
+  .media-body {
+    padding-left: 10px;
   }
 
   .chart-item-desc {
@@ -19,5 +22,9 @@
     line-height: 120%;
     letter-spacing: 0.2px;
     padding-bottom: 1.5rem;
+  }
+
+  .chart-svg {
+    padding-top: 1rem;
   }
 }

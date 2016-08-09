@@ -78,6 +78,9 @@
           "value" : "1001"
         }
       ],
+      "svg" : {
+        "path" : "M 100 8 L 75 11 L 50 0 L 25 5 L 0 58"
+      },
       "title": "Table in this Dataset converted to chart Title 1",
       "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "data" : "Yearly Data",
@@ -107,6 +110,9 @@
           "value" : "366"
         }
       ],
+      "svg" : {
+        "path" : "M 80 8 L 75 11 L 40 0 L 5 5 L 0 60"
+      },
       "title": "Table in this Dataset converted to chart Title 2",
       "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "data" : "Yearly Data",

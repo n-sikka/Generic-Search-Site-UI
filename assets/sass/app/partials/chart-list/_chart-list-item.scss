@@ -1,0 +1,23 @@
+.chart-list-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  img{
+    height: 150px;
+    width: 150px;
+  }
+  .media-heading {
+    font-size: 21px;
+    font-weight: 600;
+
+  }
+
+  .chart-item-desc {
+    display: inline-block;
+    color: $theme-grey;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.2px;
+    padding-bottom: 1.5rem;
+  }
+}

@@ -3,9 +3,9 @@
 
   angular
     .module('ng-app')
-    .service('SearchService', searcgService)
+    .service('SearchService', searchService)
 
-    function searcgService(API, $http, $q){
+    function searchService(API, $http, $q){
 
       var service = this;
 
@@ -15,6 +15,21 @@
           var deferred = $q.defer();
 
           $http.get(API.SEARCH)
+            .then(function success(response){
+              deferred.resolve(response.data);
+            }, function error(response){
+              console.log(response);
+            })
+
+          return deferred.promise;
+      }
+
+
+      service.getArticle = function(id){
+
+          var deferred = $q.defer();
+
+          $http.get(API.GET_DETAIL)
             .then(function success(response){
               deferred.resolve(response.data);
             }, function error(response){

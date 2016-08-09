@@ -1,0 +1,55 @@
+.article-meta {
+  padding: 1.5rem;
+}
+
+.detail-page-services {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.item-details {
+  padding-top: 2rem;
+  padding-left: 1rem;
+
+  .media-heading {
+    padding-top: 1rem;
+    a {
+      color: #efefef;
+    }
+    small{
+      color: #fff;
+    }
+
+    .item-details-date{
+      font-size: 2rem;
+    }
+  }
+
+  .item-lead {
+    mark {
+      padding: 1rem;
+      background: lighten($secondary-color, 10%);
+    }
+  }
+
+  .item-details-tags {
+    .search-tags {
+      border-color: #fff;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken(#fff, 15%);
+      }
+    }
+  }
+
+  .item-meta-title {
+    padding-top: 3rem;
+  }
+
+  .chart-list {
+    margin-left: 0.25rem;
+  }
+}

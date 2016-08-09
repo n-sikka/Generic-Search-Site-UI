@@ -5,6 +5,20 @@
   padding-right: 238px;
 }
 
+.block-padding {
+  padding: 1.25rem;
+}
+
+.vertical-padding {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.horizontal-padding {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .column-center {
 	float: none;
 	margin: 0 auto;
@@ -34,6 +48,53 @@
   }
 }
 
+.detail-list-container {
+  @include padding(1rem, 1rem, 0, 0);
+  padding-left: 2rem;
+
+  .service-item{
+    width: auto;
+
+    .badge {
+      @include padding(5px, 5px, 10px, 10px)
+      margin-top: 10px;
+    }
+    .color-badge{
+      cursor: pointer;
+      background: $primary-color;
+    }
+
+    .badge-accent{
+      cursor: pointer;
+      background: $accent-primary;
+    }
+
+    .grey-badge{
+      background: $theme-grey;
+    }
+  }
+
+}
+
+
+.service-list {
+
+  .service-list-item {
+    @include padding(5px, 5px, 10px, 10px);
+    background-color: $primary-color;
+    border-radius: 2.5rem;
+    color : $primary-color-text;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($primary-color, 5%);
+    }
+  }
+
+}
+
 .primary-tag {
   @include padding(0.5rem, 0.5rem, 1rem, 1rem);
   background-color: #eee;
@@ -55,4 +116,38 @@
 
 .btn-accent {
   @include btn-styles($accent-primary)
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.make-it-teal {
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $primary-color;
+  }
+}
+
+
+.search-tags {
+  @include margin(2px, 2px, 2px, 2px);
+  @include padding(3px, 3px, 7.5px, 7.5px);
+  margin-left: 3px;
+  margin-right: 3px;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 3rem;
+  font-size: 10px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: darken($primary-color, 20%);
+    border-color: darken($primary-color, 20%);
+  }
 }

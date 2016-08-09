@@ -38,6 +38,17 @@
             controllerAs: 'vm'
           }
         }
+      })
+      .state('details', {
+        url: '/details/:id',
+        parent: 'base',
+        views: {
+          "content": {
+            templateUrl: _dirPath + 'pages/details/details.html',
+            controller: 'ArticleDetailsController',
+            controllerAs: 'vm'
+          }
+        }
       });
 
   }

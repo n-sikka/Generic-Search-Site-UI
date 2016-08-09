@@ -6,7 +6,7 @@
       <div class="col-md-8 col-xs-12">
         <h3>
           <img ng-src="{{data.dataset.image}}" alt="D" class="img-circle"/>
-          <span class="item-card-title"><a href>{{data.title}}</a></span>
+          <span class="item-card-title"><a  ui-sref="details({id: data.id})">{{data.title}}</a></span>
         </h3>
       </div>
       <div class="col-md-4 col-xs-12 text-right tags">
@@ -46,8 +46,8 @@
       <div class="col-md-4">
         <ul class="list-group meta-list-group">
           <li class="list-group-item"><b><a href >{{data.dataset.source}} </b><i class="fa fa-external-link"></i> </a></li>
-          <li class="list-group-item"><b>Released: </b> {{data.dataset.released | date: 'dd/mm/yyy'}}</li>
-          <li class="list-group-item">  <b>Records upto: </b>{{data.dataset.records_upperbound | date: 'dd/mm/yyy'}}</li>
+          <li class="list-group-item"><b>Released: </b> {{data.dataset.released | date: 'dd/mm/yyyy'}}</li>
+          <li class="list-group-item">  <b>Records upto: </b>{{data.dataset.records_upperbound | date: 'dd/mm/yyyy'}}</li>
           <li class="list-group-item"><b>Total Records: </b> {{data.dataset.total_records}}</li>
         </ul>
 
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="col-md-4 col-xs-12 text-right">
-        <button class="btn btn-accent">See Details</button>
+        <button class="btn btn-accent" ui-sref="details({id: data.id})">See Details</button>
       </div>
     </div>
 

@@ -39,6 +39,8 @@
 
 
 
+
+
   .tags {
     @include for-screen('mobile') {
       margin-top: 50px;
@@ -48,6 +50,23 @@
 
   .meta-list-group {
     margin-top: 3rem;
+  }
+
+}
+
+.detail-list-container {
+  @include padding(1rem, 1rem, 0, 0);
+
+  &.resources-container {
+    padding-left: 15px!important;
+  }
+
+  .service-item{
+    width: auto;
+
+    .badge {
+      color: $primary-color-text;
+    }
   }
 
 }

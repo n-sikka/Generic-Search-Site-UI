@@ -28,7 +28,7 @@
     },
     {
       "service" : "charts",
-      "available": true,
+      "available": false,
       "slug" : ""
     }
   ],

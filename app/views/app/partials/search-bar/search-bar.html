@@ -9,47 +9,40 @@
 	</div>
 
 	<div class="search-typeahead-container" ng-if="query" ng-init="area = location ? location : 'india'">
-		<!-- <search-typeahead query="query" results="results" groups="types" limit="limitBy"></search-typeahead> -->
 		<div>
 
 			<ul class="typeahead-list">
 
+				<!-- with an api that can facilitate, this section can be converted into a directive and a clean code -->
+				<!-- something like <search-typeahead data="data" query="query"></search-typeahead> -->
+
 				<li class="list-header" ui-sref="search({city: area, entity: 'healthcare', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Healthcare</b></span>
-
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
-
 					<span class="list-count pull-right primary-tag" >View All <b>10</b></span>
 				</li>
 
 				<li class="list-header" ui-sref="search({city: area, entity: 'education', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Education</b></span>
-
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
-
 					<span class="list-count pull-right primary-tag">View All <b>25</b></span>
 				</li>
 
 				<li class="list-header" ui-sref="search({city: area, entity: 'demographics', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Demographics</b></span>
-
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
-
 					<span class="list-count pull-right primary-tag">View All <b>68</b></span>
 				</li>
 
 				<li class="list-header" ui-sref="search({city: area, entity: 'agriculture', q: query})">
 					<span class="list-title text-uppercase">No result found for <b>Agriculture</b></span>
-
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
 
 				</li>
 
 				<li class="list-header" ui-sref="search({city: area, entity: 'economy', q: query})">
 					<span class="list-title text-uppercase">Found for <b>Economy</b></span>
-
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
-
 					<span class="list-count pull-right primary-tag">View All <b>8</b></span>
 				</li>
 

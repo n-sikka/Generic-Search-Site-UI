@@ -10,10 +10,8 @@
 				restrict: 'EA',
 				templateUrl: 'app/views/app/partials/search-bar/typeahead.html',
 				scope: {
-					query: '=query',
-					results: '=results',
-          types: '=groups',
-          limit: '=limit'
+					data: '=',
+					query: '='
 				}
 			}
 

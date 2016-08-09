@@ -6,7 +6,7 @@
     "image" : "http://lorempixel.com/200/200"
   },
   "main_tags" : ["Healthcare", "Agriculture", "Climate"],
-  "topics": ["Consumer", "Housing and Community", "Climate", "Economy", "Science", "Universe", "Something Else", "This Too"],
+  "topics": ["These", "Are", "All the", "Tags", "Related to", "This", "Specific", "Dataset", "As per", "Our backend"],
   "services" : [
     {
       "service" : "pdf",

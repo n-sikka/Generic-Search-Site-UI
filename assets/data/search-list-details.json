@@ -3,7 +3,7 @@
   "data_source" : {
     "author": "SocialCops",
     "slug" : "https://socialcops.com/",
-    "image" : "http://loremflickr.com/200/200"
+    "image" : "http://lorempixel.com/200/200"
   },
   "main_tags" : ["Healthcare", "Agriculture", "Climate"],
   "topics": ["Consumer", "Housing and Community", "Climate", "Economy", "Science", "Universe", "Something Else", "This Too"],

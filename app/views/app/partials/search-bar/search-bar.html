@@ -38,20 +38,28 @@
 					<span class="list-count pull-right primary-tag">View All <b>68</b></span>
 				</li>
 
-				<li class="list-header" ui-sref="search({city: area, entity: 'media', q: query})">
-					<span class="list-title text-uppercase">Found for <b>Media</b></span>
+				<li class="list-header" ui-sref="search({city: area, entity: 'agriculture', q: query})">
+					<span class="list-title text-uppercase">No result found for <b>Agriculture</b></span>
 
 					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
 
-					<span class="list-count pull-right primary-tag">View All <b>20</b></span>
+				</li>
+
+				<li class="list-header" ui-sref="search({city: area, entity: 'economy', q: query})">
+					<span class="list-title text-uppercase">Found for <b>Economy</b></span>
+
+					<i class="primary-divider fa fa-minus"></i><i class="primary-divider _path2 fa fa-minus"></i>
+
+					<span class="list-count pull-right primary-tag">View All <b>8</b></span>
 				</li>
 
 			</ul>
 
 		</div>
 
+
 		<div class="typeahead-footer text-center">
-			<div class="typeahead-search-more">
+			<div class="typeahead-search-more" ui-sref="search({city: area, entity: 'all', q: query})">
 				<i class="fa fa-search search-icon"></i>
 				<span class="message">Search all dataset for <b>"{{query}}"</b> </span>
 			</div>

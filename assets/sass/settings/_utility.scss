@@ -176,9 +176,82 @@
 
 .breadcrumb-item {
   a {
-    color: $primary-color-text;
+    color: $theme-grey;
   }
   &.active {
-    color: #ccc;
+    color: #BDBDBD;
+  }
+}
+
+
+
+/*FILTERBOX CHIPS*/
+.chip {
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $primary-color-text;
+  line-height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: $primary-color;
+  margin-right: 10px;
+
+  img {
+    float: left;
+    margin: 0 8px 0 -12px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+
+  .close {
+    cursor: pointer;
+    float: right;
+    // display: none;
+    font-size: 16px;
+    color: #fff;
+    line-height: 32px;
+    padding-left: 5px;
+  }
+}
+
+.chips {
+  border: none;
+  box-shadow: none;
+  margin-bottom: 30px;
+  min-height: 45px;
+  outline: none;
+  padding-bottom: 10px;
+  transition: all .3s;
+
+  &:hover {
+    cursor: text;
+  }
+
+  .chip.selected {
+    background-color: $primary-color-dark;
+    color: #fff;
+  }
+
+  .input {
+    background: none;
+    border: 0;
+    color: rgba(0,0,0,1);
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 32px;
+    margin-right: 20px;
+    line-height: 32px;
+    outline: 0;
+    padding: 0 !important;
+    width: 120px !important;
+  }
+
+  .input:focus {
+    border: 0 !important;
+    box-shadow: none !important;
   }
 }

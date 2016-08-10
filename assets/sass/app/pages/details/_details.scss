@@ -11,8 +11,14 @@
 }
 
 .detail-page-services {
-  padding-left: 0;
+  // padding-left: 0;
   padding-top: 0;
+  .service-item {
+    // padding-left: 0;
+    padding-top: 0;
+    margin-right: -15px;
+    margin-bottom: 5px;
+  }
 }
 
 .dataset-img {
@@ -107,25 +113,25 @@
     }
   }
 
-  .tag-list {
 
-    .tag-list-item {
-      color: $accent-primary;
-      border: 1px solid $accent-primary;
-      border-radius: 2rem;
-      @include padding(5px, 5px, 10px, 10px);
-      cursor: pointer;
-      margin-bottom: 1rem;
-      margin-right: 1rem;
+}
+.tag-list {
 
-      &:hover,
-      &:focus,
-      &:active {
-        color: darken($accent-primary, 15%);
-        border-color: darken($accent-primary, 15%);
-      }
+  .tag-list-item {
+    color: $accent-primary;
+    border: 1px solid $accent-primary;
+    border-radius: 2rem;
+    @include padding(5px, 5px, 10px, 10px);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($accent-primary, 15%);
+      border-color: darken($accent-primary, 15%);
     }
-
   }
 
 }

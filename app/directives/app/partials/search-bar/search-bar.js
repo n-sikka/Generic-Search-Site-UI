@@ -12,7 +12,8 @@
 				controller: 'SearchBarController',
 				controllerAs: 'vm',
 				scope: {
-					key: '='
+					key: '=',
+					groups: '='
 				},
 				link: linkFunction
 

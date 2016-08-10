@@ -156,21 +156,20 @@
           </div>
         </div>
 
+        <div class="row vertical-padding">
+          <div class="col-md-12">
+            <h2 class="lead item-lead  item-meta-title">Tags</h2>
+          </div>
+          <div class="col-md-12">
+            <ul class="list-inline tag-list">
+              <li class="tag-list-item" ng-repeat="item in vm.details.search_tags">{{item}}</li>
+            </ul>
+          </div>
+        </div>
+
+
 
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="row vertical-padding card ">
-  <div class="container-fluid">
-    <div class="col-md-12">
-      <h2 class="lead item-lead  item-meta-title"><mark>Tags</mark></h2>
-    </div>
-    <div class="col-md-12">
-        <ul class="list-inline tag-list">
-          <li class="tag-list-item" ng-repeat="item in vm.details.search_tags">{{item}}</li>
-        </ul>
     </div>
   </div>
 </div>

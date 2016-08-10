@@ -3,10 +3,11 @@
   "data_source" : {
     "author": "SocialCops",
     "slug" : "https://socialcops.com/",
-    "image" : "http://lorempixel.com/200/200"
+    "image" : "assets/img/dataset.png"
   },
   "main_tags" : ["Healthcare", "Agriculture", "Climate"],
-  "topics": ["These", "Are", "All the", "Tags", "Related to", "This", "Specific", "Dataset", "As per", "Our backend"],
+  "seo_tags": ["These", "Are", "All the", "Tags", "Related to", "This", "Specific", "Dataset", "As per", "Our backend"],
+  "topics": ["Population", "Granuality", "Occupation", "Caste", "Literacy Rate", "Schools", "Growth Rate", "Water Availability"],
   "services" : [
     {
       "service" : "pdf",

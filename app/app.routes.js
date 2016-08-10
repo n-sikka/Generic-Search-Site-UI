@@ -32,6 +32,9 @@
         url: '/search/city=:city&entity=:entity&q=:q',
         parent: 'base',
         views: {
+          "nav" : {
+            templateUrl: ""
+          },
           "content": {
             templateUrl: _dirPath + 'listing/search/search.html',
             controller: 'SearchController',

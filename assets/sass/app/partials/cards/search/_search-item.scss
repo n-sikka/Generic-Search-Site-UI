@@ -10,6 +10,21 @@
     padding-left: 1rem;
   }
 
+  .title-img {
+    @include for-screen('tab') {
+      margin-top: 5px;
+    }
+  }
+
+  .tags {
+    @include for-screen('tab') {
+      margin-top: 4rem;
+      text-align: left;
+    }
+    
+  }
+
+
   .search-item-desc {
     margin-top: 32px;
   }
@@ -35,17 +50,6 @@
   }
   .data-set-img{
     margin-top: 1rem;
-  }
-
-
-
-
-
-  .tags {
-    @include for-screen('mobile') {
-      margin-top: 50px;
-      text-align: center
-    }
   }
 
   .meta-list-group {

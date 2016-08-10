@@ -6,7 +6,7 @@
 	.controller('SearchBarController', controller);
 
 
-	function controller($log, $http, API) {
+	function controller($log, $http, $state, API) {
 
 		var vm = this;
 
@@ -16,6 +16,16 @@
 			}, function success(response){
 				console.log(response.statusText);
 			})
+		}
+
+		vm.makeSearch = function(str, event){
+			if(event.keyCode === 13){
+				$state.go('search', {
+					city: 'all',
+					entity: 'all',
+					q: str
+				})
+			}
 		}
 	}
 
